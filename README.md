@@ -1,4 +1,4 @@
-# Scout and Ionic
+# ScoutX Mobile 
 
 - [Goal](#goal)
 - [Backend](#backend)
