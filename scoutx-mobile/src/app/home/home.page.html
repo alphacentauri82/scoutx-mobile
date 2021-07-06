@@ -1,0 +1,36 @@
+<scoutx-header></scoutx-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="scout$ | async as scout; else noscout">
+
+    <div *ngIf="entries$ | async as entries" class="ion-text-center">
+      <h1
+        class="green"
+        [class.red]="entries[0].sgv < scout.minBG || entries[0].sgv > scout.maxBG"
+      >
+        {{entries[0].sgv}}
+      </h1>
+      <h5>
+          <span>
+            <small>minBG</small> {{scout.minBG}}
+          </span>
+        <span>
+            <small>maxBG</small> {{scout.maxBG}}
+          </span>
+      </h5>
+    </div>
+
+    <ng-container *ngIf="coordinates$ | async as coordinates">
+      <agm-map [zoom]="zoom" [latitude]="+coordinates.latitude" [longitude]="+coordinates.longitude">
+        <agm-marker [latitude]="+coordinates.latitude" [longitude]="+coordinates.longitude"></agm-marker>
+      </agm-map>
+    </ng-container>
+
+
+  </div>
+  <ng-template #noscout>
+    <div class="empty">
+      Please, configure a Scout in the settings section.
+    </div>
+  </ng-template>
+</ion-content>

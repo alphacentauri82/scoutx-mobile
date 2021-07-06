@@ -1,0 +1,26 @@
+:host {
+  form {
+    padding: 20px;
+    ion-icon[slot="start"] {
+      padding-top: 16px;
+      padding-inline-end: 0px;
+      padding-right: 0px;
+      margin-right: 15px;
+    }
+
+    ion-icon[slot="end"] {
+      padding-top: 20px;
+    }
+
+    ion-item {
+      margin-bottom: 15px;
+    }
+
+    ion-note {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+
+}

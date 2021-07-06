@@ -1,0 +1,10 @@
+{
+  "name": "scoutx-mobile",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

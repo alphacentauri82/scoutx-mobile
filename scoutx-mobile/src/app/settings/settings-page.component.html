@@ -1,0 +1,114 @@
+<scoutx-header title="settings"></scoutx-header>
+
+<ion-content padding [fullscreen]="true">
+  <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label color="medium" position="stacked">
+        NightScout API URL
+      </ion-label>
+      <ion-icon color="medium" slot="start" name="globe-outline"></ion-icon>
+      <ion-input formControlName="nightScoutURL"
+                 required
+                 placeholder="http://my.url/v1/entries.json">
+      </ion-input>
+    </ion-item>
+
+    <ion-note
+      *ngIf="inValid('nightScoutURL')"
+      color="danger">
+      Please type a API URL
+    </ion-note>
+
+    <ion-item>
+      <ion-label color="medium" position="stacked">
+        Your Phone number
+      </ion-label>
+      <ion-icon color="medium" slot="start" name="call-outline"></ion-icon>
+      <ion-input formControlName="phoneNumber"
+                 required
+                 placeholder="e.g: 1525125123"
+                 inputmode="tel">
+      </ion-input>
+    </ion-item>
+
+    <ion-note
+      *ngIf="inValid('phoneNumber')"
+      color="danger">
+      Please type a API URL
+    </ion-note>
+
+    <div formArrayName="emergencyNumbers">
+      <ion-item *ngFor="let emergencyContact of emergencyNumbers.controls; let contactIndex = index">
+        <ion-label color="medium" position="stacked">
+          Emergency number
+        </ion-label>
+        <ion-icon color="medium" slot="start" name="person-circle-outline"></ion-icon>
+
+        <ion-icon *ngIf="contactIndex > 0"
+                  (click)="removeContact(contactIndex)"
+                  color="primary"
+                  slot="end"
+                  name="remove-circle-outline">
+        </ion-icon>
+
+        <ion-input [formControlName]="contactIndex"
+                   required
+                   placeholder="e.g: 9937366171"
+                   inputmode="tel">
+        </ion-input>
+      </ion-item>
+
+      <div class="ion-text-end ion-padding">
+        <ion-button
+          (click)="addContact()"
+          [disabled]="(emergencyNumbers.controls.length > 5)">
+            <ion-icon name="add-circle-outline"></ion-icon>
+            Add new emergency contact
+        </ion-button>
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label color="medium" position="stacked">
+        Min BG Level
+      </ion-label>
+      <ion-icon color="medium" slot="start" name="trending-down-outline"></ion-icon>
+      <ion-input formControlName="minBG"
+                 required
+                 type="number"
+                 placeholder="e.g: 75">
+      </ion-input>
+    </ion-item>
+
+    <ion-note
+      *ngIf="inValid('minBG')"
+      color="danger">
+      Please type a minBG
+    </ion-note>
+
+    <ion-item>
+      <ion-label color="medium" position="stacked">
+        Max BG Level
+      </ion-label>
+      <ion-icon color="medium" slot="start" name="trending-up-outline"></ion-icon>
+      <ion-input formControlName="maxBG"
+                 required
+                 type="number"
+                 placeholder="e.g: 111">
+      </ion-input>
+    </ion-item>
+
+    <ion-note
+      *ngIf="inValid('maxBG')"
+      color="danger">
+      Please type a maxBG
+    </ion-note>
+
+    <div class="ion-text-end ion-padding">
+      <ion-button type="submit">
+        <ion-icon name="save"></ion-icon>
+        Save settings
+      </ion-button>
+    </div>
+  </form>
+</ion-content>
