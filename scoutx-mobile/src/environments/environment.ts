@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyCdneKXXllg77XOvgJ712j6HnKlYBm3LiA",
-    authDomain: "eastern-concord-315709.firebaseapp.com",
-    projectId: "eastern-concord-315709",
-    storageBucket: "eastern-concord-315709.appspot.com",
-    messagingSenderId: "194134917824",
-    appId: "1:194134917824:web:757d8f6dd5997adef02325"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
   }
 };
 
