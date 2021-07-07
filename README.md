@@ -33,7 +33,7 @@ In order to build and set the Firebase Authentication for the Android version, a
 
 An easy way to create it in a Unix based OS is exceuting the following command: 
 
-```
+```bash
 
 keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 50000
 
@@ -41,7 +41,7 @@ keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -keyalg RSA -
 
 After that to get the fingerprint, execute the following command:
 
-```
+```bash
 keytool -exportcert -alias androiddebugkey -keystore debug.keystore -list -v
 ```
 
