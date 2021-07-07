@@ -8,8 +8,7 @@
 ## Goal
 
 The goal of this project is migrate the current implementation of [Scoutx](https://github.com/alphacentauri82/scoutx) to
-an Ionic-Angular solution. With Scoutx running on a mobile device, the system can access to the GPS location and send it with the SMS
-notification.
+an Ionic-Angular solution. With Scoutx running on a mobile device, the system can access to the GPS location and send an SMS notification.
 
 ## Backend
 
