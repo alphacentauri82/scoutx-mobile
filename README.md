@@ -7,7 +7,7 @@
 
 ## Goal
 
-The goal of this project is to migrate the current implementation of [Scoutx](https://github.com/alphacentauri82/scoutx) to
+The goal of this project is to migrate the current implementation of [ScoutX](https://github.com/alphacentauri82/scoutx) to
 an Ionic-Angular solution. With Scoutx running on a mobile device, the system can access to the device's GPS location and in case of emergency, all emergency contacts will receive precise location through a text message.
 
 ## Backend
