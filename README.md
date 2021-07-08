@@ -1,5 +1,6 @@
 # ScoutX Mobile 
-
+> More documentation on how to compile your own APK and set up your Vonage or Twilio Account is coming soon!
+---
 - [Goal](#goal)
 - [Backend](#backend)
 - [The application](#the-application)
