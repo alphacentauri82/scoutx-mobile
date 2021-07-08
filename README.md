@@ -16,7 +16,7 @@ an Ionic-Angular solution. With Scoutx running on a mobile device, the system ca
 The backend remains like the original python implementation, the web part was completely removed and the `notifier.py` has changes in the `sms_glucose_alert` function. If location is detected, the SMS will contain a Google Maps Link with the following format ` https://www.google.com/maps/@{0},{1},18.4z`.
 
 
-To deploy, follow the instructions in the original [Scoutx Repository](https://github.com/alphacentauri82/scoutx). There's also a dockerfile should you want to deploy the backend to cloudrun.
+To deploy, follow the instructions in the original [ScoutX Repository](https://github.com/alphacentauri82/scoutx). There's also a dockerfile should you want to deploy the backend to cloudrun.
 
 ## The Application
 
